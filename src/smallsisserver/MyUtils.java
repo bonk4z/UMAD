@@ -21,14 +21,10 @@ public class MyUtils {
     public static void printLogEntry(LogEntry le){
         
         
-        
+        //asdasd
         boolean hasImageAttached;
         
-        if(le.getImg() == null)
-            hasImageAttached = false;
-        else
-            hasImageAttached = true;
-        
+        hasImageAttached = le.getImg() != null;
         
         System.out.println("User: " + le.getPupil().getMatrikelNr() + " " + le.getPupil().getName() + "\tTag: " + le.getTag().name() + "\tMessage: " + le.getMsg() + "\tHasImageAttached: " + hasImageAttached +"\tTimeStamp: " + df.format(le.getTimeStamp()));
         
