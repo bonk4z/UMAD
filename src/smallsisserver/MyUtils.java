@@ -16,7 +16,7 @@ import resources.LogEntry;
  */
 public class MyUtils {
     
-    public static DateFormat df = new SimpleDateFormat("HH:mm:ss");
+    public static DateFormat df = new SimpleDateFormat("HH-mm-ss");
 
     public static void printLogEntry(LogEntry le){
         
