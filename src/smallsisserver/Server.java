@@ -8,7 +8,6 @@ package smallsisserver;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.ObjectInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.DateFormat;
@@ -19,7 +18,6 @@ import java.util.Observable;
 import java.util.Observer;
 import javax.imageio.ImageIO;
 import resources.LogEntry;
-import resources.Pupil;
 
 /**
  *
