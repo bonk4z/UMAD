@@ -26,6 +26,8 @@ public class MyUtils {
         
         hasImageAttached = le.getImg() != null;
         //es geht woo
+        
+        //next woaeae
         System.out.println("User: " + le.getPupil().getMatrikelNr() + " " + le.getPupil().getName() + "\tTag: " + le.getTag().name() + "\tMessage: " + le.getMsg() + "\tHasImageAttached: " + hasImageAttached +"\tTimeStamp: " + df.format(le.getTimeStamp()));
         
         
