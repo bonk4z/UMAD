@@ -22,7 +22,7 @@ public class LogEntry implements Serializable {
     private String msg;
     Pupil pupil;
     private byte[] img = null;
-    private Date timeStamp;
+    private final Date timeStamp;
     private Tag tag;
 
     public LogEntry(Pupil pupil, Tag tag, String msg) {
