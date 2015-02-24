@@ -32,10 +32,11 @@ public class Logger implements Runnable {
             System.out.println("connected");
 
             p = (Pupil) reader.readObject();
-            //System.out.println("new Pupil connected: " + p.getName());
+            System.out.println("new Pupil connected: " + p.getName());
             LogEntry lex = new LogEntry(p, LogEntry.Tag.CONNECTION, "A User has connected");
             LogEntryRepository.getInstance().insert(lex);
             PupilRepository.getInstance().insert(p,socket);
+            System.out.println(PupilRepository.getInstance().getAllPupils().size());
 
 
             while(true){

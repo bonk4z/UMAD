@@ -10,8 +10,6 @@ import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
@@ -32,7 +30,6 @@ public class Server implements Runnable, Observer {
     
     public Server(){
         LogEntryRepository.getInstance().addObserver(this);
-        System.out.println(LogEntry.Tag.CONNECTION.name());
     }
 
     @Override
@@ -59,7 +56,6 @@ public class Server implements Runnable, Observer {
     public void update(Observable o, Object arg) {
 
         System.out.println("update called");
-                DateFormat df = new SimpleDateFormat("HH:mm:ss");
 
 
         LogEntry latest = LogEntryRepository.getInstance().getLastLogEntry();
@@ -70,7 +66,10 @@ public class Server implements Runnable, Observer {
         if(latest.hasImgAttached()){
         try{
             BufferedImage bi = ImageIO.read(new ByteArrayInputStream(latest.getImg()));
-            ImageIO.write(bi, "jpg", new File(MyUtils.getAbsJpgPath("/Users/Desktop/tobias/Desktop", latest)));
+            File f = new File(MyUtils.getAbsJpgPath("C:\\Viktor\\SYP\\Screens", latest,true));
+            f.mkdir();
+            f = new File(MyUtils.getAbsJpgPath("C:\\Viktor\\SYP\\Screens", latest,false));
+            ImageIO.write(bi, "jpg", f);
 
 
         }catch(Exception e){e.getMessage();}

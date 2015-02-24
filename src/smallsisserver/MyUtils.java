@@ -32,10 +32,13 @@ public class MyUtils {
         
         
     }
-     public static String getAbsJpgPath(String homePath, LogEntry le){
+     public static String getAbsJpgPath(String homePath, LogEntry le, boolean dir){
         String res;
-        
-        res = homePath.concat(File.separator).concat(le.getPupil().getMatrikelNr()).concat(File.separator).concat(df.format(le.getTimeStamp())).concat(".jpg");
+        if(dir)
+            res = homePath.concat(File.separator).concat(le.getPupil().getMatrikelNr()).concat(File.separator);
+        else
+            res = homePath.concat(File.separator).concat(le.getPupil().getMatrikelNr()).concat(File.separator).concat(df.format(le.getTimeStamp())).concat(".jpg");
+
         
         return res;
     }

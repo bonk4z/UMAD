@@ -5,9 +5,6 @@
  */
 package smallsisserver;
 
-import java.util.Observable;
-import java.util.Observer;
-
 /**
  *
  * @author Viktor

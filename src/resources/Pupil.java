@@ -2,6 +2,7 @@ package resources;
 
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -57,6 +58,18 @@ public class Pupil implements Serializable{
     @Override
     public int hashCode() {
         return this.matrikelNr.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Pupil other = (Pupil) obj;
+        return Objects.equals(this.matrikelNr, other.matrikelNr);
     }
     
     

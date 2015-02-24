@@ -7,8 +7,6 @@ package smallsisserver;
 
 import java.net.Socket;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
 import resources.Pupil;
 
 /**
@@ -29,10 +27,11 @@ public class PupilRepository {
     }
     
     public void insert(Pupil p, Socket s){
-        pupils.put(p, s);
+        if(!pupils.containsKey(p))
+            pupils.put(p, s);
     }
     
     public HashMap<Pupil, Socket> getAllPupils(){        
-        return new HashMap<Pupil, Socket>(pupils);
+        return new HashMap<>(pupils);
     }
 }

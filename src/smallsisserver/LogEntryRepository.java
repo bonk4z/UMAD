@@ -9,7 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
 import resources.LogEntry;
-import resources.Pupil;
 
 /**
  *
