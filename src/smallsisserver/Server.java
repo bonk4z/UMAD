@@ -17,10 +17,7 @@ import java.util.Observer;
 import javax.imageio.ImageIO;
 import resources.LogEntry;
 
-/**
- *
- * @author Viktor
- */
+
 public class Server implements Runnable, Observer {
     
     boolean firstTry = true;
